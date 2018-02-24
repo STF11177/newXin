@@ -1,0 +1,593 @@
+//
+//  xinBei-PrefixHeader.pch
+//  xinBeiTeenEducation
+//
+//  Created by user on 2017/3/6.
+//  Copyright © 2017年 user. All rights reserved.
+//
+
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features onlly available in iOS SDK 5.0 and later."
+#endif
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "UIImage+Extension.h"
+#import "UIView+Extension.h"
+#import "NSString+Extension.h"
+#import "Masonry.h"
+#import "SDWebImageManager.h"
+#import "SDImageCache.h"
+#import "MBProgressHUD+MJ.h"
+#import "MJRefresh.h"
+#import "MBProgressHUD.h"
+#import "UIImageView+WebCache.h"
+#import <AVFoundation/AVFoundation.h>
+#import "appListController.h"
+
+#import "CommonSheet.h"
+#import "UIViewController+HUD.h"
+#import "AFNetworking.h"
+#import "YYKit.h"
+#import "MJExtension.h"
+#import <JavaScriptCore/JavaScriptCore.h>
+#import "UINavigationController+FDFullscreenPopGesture.h"
+
+#import "XPathQuery.h"
+#import "TFHpple.h"
+#import "TFHppleElement.h"
+
+#import "ETNSObject.h"
+#import "ETColor.h"
+#import "ETImage.h"
+#import "ETString.h"
+#import "ETArray.h"
+#import "ETMutableArray.h"
+#import "UIViewController+mainAction.h"
+#import "ETUIUtil.h"
+#import "FilePathUtil.h"
+#import "ETRegularUtil.h"
+#import "ETDateUtil.h"
+#import "CommonAlert.h"
+#import "CommonSheet.h"
+#import "SBJson.h"
+#import "ETMessageView.h"
+
+#import "AFNetworking.h"
+#import <CoreData/CoreData.h>
+#import "WebViewJavascriptBridge.h"
+#import <UMSocialCore/UMSocialCore.h>
+
+#import "ETBaseData.h"
+
+#define _LolitaFunctions [LolitaFunctions sharedObject]
+
+#define adressURl @"http://106.14.251.200:8082/neworld/user/107"
+#define attenedURL @"http://106.14.251.200:8082/neworld/user/115"
+#define deleteAttnedURL @"http://106.14.251.200:8082/neworld/user/117"
+#define addURL @"http://106.14.251.200:8082/neworld/user/116"
+#define allFriendURL @"http://106.14.251.200:8082/neworld/user/101"
+#define isFriendURL @"http://106.14.251.200:8082/neworld/user/104"//
+#define deleFriendURL @"http://106.14.251.200:8082/neworld/user/103"//
+#define beizhuURL @"http://106.14.251.200:8082/neworld/user/105"//
+#define detailURL @"http://106.14.251.200:8082/neworld/user/119"
+#define AttenURL @"http://106.14.251.200:8082/neworld/user/118"
+#define typeNameURl @"http://106.14.251.200:8082/neworld/user/120"
+#define textURL @"http://106.14.251.200:8082/neworld/user/121"
+#define imageUPLoadURL @"http://106.14.251.200:8082/neworld/user/122"
+#define nickURL @"http://106.14.251.200:8082/neworld/user/128"
+#define sendJudgeURL @"http://106.14.251.200:8082/neworld/user/130"
+#define hotRecommentURL @"http://106.14.251.200:8082/neworld/user/131"
+#define addFriendURL @"http://106.14.251.200:8082/neworld/user/102"//
+#define blackListURL @"http://106.14.251.200:8082/neworld/user/106"//
+#define testTypeURL @"http://106.14.251.200:8082/neworld/user/136"//
+//#define subjectURL @"http://106.14.251.200:8082/neworld/user/137"//
+#define addchildDataURL @"http://106.14.251.200:8082/neworld/user/141"
+#define childDataURL @"http://106.14.251.200:8082/neworld/user/140"
+//#define collectURL @"http://106.14.251.200:8082/neworld/user/112"
+#define newDeleteURL @"http://106.14.251.200:8082/neworld/user/110"
+#define seeChildMesURL @"http://106.14.251.200:8082/neworld/user/142"
+#define shareTaskIdURL @"http://106.14.251.200:8082/neworld/user/144"
+#define testMessageURL @"http://106.14.251.200:8082/neworld/user/124"
+#define loginURL @"http://106.14.251.200:8082/neworld/user/125"
+#define mineURL @"http://106.14.251.200:8082/neworld/user/126"
+#define upLoadImageURL @"http://106.14.251.200:8082/neworld/user/127"
+#define testOrderURL @"http://106.14.251.200:8082/neworld/user/138"
+#define payURL @"http://106.14.251.200:8082/neworld/user/139"
+#define hotArtcleURL @"http://106.14.251.200:8082/neworld/user/133"
+#define parentBlackCircleURL @"http://106.14.251.200:8082/neworld/user/150"
+#define deletePersonURL @"http://106.14.251.200:8082/neworld/user/145"
+#define circleCollectURL @"http://106.14.251.200:8082/neworld/user/113"
+#define commentURL @"http://106.14.251.200:8082/neworld/user/129"//
+#define detailCommetURL @"http://106.14.251.200:8082/neworld/user/114"
+//#define newDetailURL @"http://106.14.251.200:8082/neworld/user/108"//
+#define hotCommentURL @"http://106.14.251.200:8082/neworld/user/134"
+#define newDetailLikeURL @"http://106.14.251.200:8082/neworld/user/111"
+#define testLikeURL @"http://106.14.251.200:8082/neworld/user/159"
+#define hotTypeURL @"http://106.14.251.200:8082/neworld/user/132"
+#define hotShareURL @"http://106.14.251.200:8082/neworld/user/149"
+#define orderWillPayURL @"http://106.14.251.200:8082/neworld/user/147"
+#define loadCardURL @"http://106.14.251.200:8082/neworld/user/146"
+#define deleteOrderURL @"http://106.14.251.200:8082/neworld/user/148"
+#define payURL @"http://106.14.251.200:8082/neworld/user/139"
+#define detialToPayURL @"http://106.14.251.200:8082/neworld/user/163"
+#define isPingBiURL @"http://106.14.251.200:8082/neworld/user/155"
+#define chagePhoneURL @"http://106.14.251.200:8082/neworld/user/151"
+#define logOutURL @"http://106.14.251.200:8082/neworld/user/152"
+#define testCommentURL  @"http://106.14.251.200:8082/neworld/user/157"
+#define testDetailURL @"http://106.14.251.200:8082/neworld/user/158"
+#define isLikeOrCollectURL @"http://106.14.251.200:8082/neworld/user/154"
+#define myChildGradeURL @"http://106.14.251.200:8082/neworld/user/165"
+#define myChildSchoolURL @"http://106.14.251.200:8082/neworld/user/166"
+#define myChildclassURL @"http://106.14.251.200:8082/neworld/user/167"
+#define saveAllMessageURL @"http://106.14.251.200:8082/neworld/user/170"
+#define addClassURL @"http://106.14.251.200:8082/neworld/user/168"
+#define currentVersionURL @"http://106.14.251.200:8082/neworld/user/171"
+#define BlackListURL @"http://106.14.251.200:8082/neworld/user/164"
+#define bugListURL @"http://106.14.251.200:8082/neworld/user/172"
+//#define bugAllListURL @"http://106.14.251.200:8082/neworld/user/172_1"
+//#define bugtextURL @"http://106.14.251.200:8082/neworld/user/173"
+#define bugImgURL @"http://106.14.251.200:8082/neworld/user/174"
+#define bugDeleteURL @"http://106.14.251.200:8082/neworld/user/175"
+#define childImageURL @"http://106.14.251.200:8082/neworld/user/141_1"
+#define childSchoolDeleteURL @"http://106.14.251.200:8082/neworld/user/176"
+#define eduAddAdressURL @"http://106.14.251.200:8082/neworld/user/181"
+//#define checkEduAdressURL @"http://106.14.251.200:8082/neworld/user/180"
+//#define modifyEduAdressURL @"http://106.14.251.200:8082/neworld/user/182"
+#define deleteEduAdressURL @"http://106.14.251.200:8082/neworld/user/183"
+#define paySaveAdressURL @"http://106.14.251.200:8082/neworld/user/184"
+#define payStudentMessageURL @"http://106.14.251.200:8082/neworld/user/185"
+#define eduAllBookURL @"http://106.14.251.200:8082/neworld/user/178"
+#define eduBookDetailURL @"http://106.14.251.200:8082/neworld/user/179"
+//#define newPingBiAllURL @"http://106.14.251.200:8082/neworld/user/186"
+#define eduBookOrderURL @"http://106.14.251.200:8082/neworld/user/187"
+#define eduBookPayURL @"http://106.14.251.200:8082/neworld/user/188"
+#define eduWillPayURL @"http://106.14.251.200:8082/neworld/user/189"
+#define newHideOrShowURL @"http://106.14.251.200:8082/neworld/user/186_2"
+#define eduOrderURL @"http://106.14.251.200:8082/neworld/user/190"
+//#define replyCommentURL @"http://106.14.251.200:8082/neworld/user/192"
+#define commentImgURL @"http://106.14.251.200:8082/neworld/user/114_2"
+//#define commentLikeURL @"http://106.14.251.200:8082/neworld/user/193"
+//#define detailCommentDeteleURL @"http://106.14.251.200:8082/neworld/user/109"
+//#define messageSignURL @"http://106.14.251.200:8082/neworld/user/194"
+//#define messageURL @"http://106.14.251.200:8082/neworld/user/195"
+//#define newStickURL @"http://106.14.251.200:8082/neworld/user/196"
+//#define eBookURL @"http://106.14.251.200:8082/neworld/user/197"
+//#define eBookPictURL @"http://106.14.251.200:8082/neworld/user/198"
+#define interlocutionURL @"http://106.14.251.200:8083/neworld/user/199"
+#define interDiscussURL @"http://106.14.251.200:8083/neworld/user/200"
+#define interUploadPictureURL @"http://106.14.251.200:8083/neworld/user/204"
+#define interSendMessageURL @"http://106.14.251.200:8083/neworld/user/205"
+#define interDiscussDetailURL @"http://106.14.251.200:8083/neworld/user/201"
+#define interDetailCommentURL @"http://106.14.251.200:8083/neworld/user/202"
+#define interSendCommentURL @"http://106.14.251.200:8083/neworld/user/206"
+#define interDetailDeleteURL @"http://106.14.251.200:8083/neworld/user/207"
+#define interDetailNextURL @"http://106.14.251.200:8083/neworld/user/208"
+
+
+
+//#define adressURl @"http://192.168.1.123:8080/neworld/user/107"
+//#define attenedURL @"http://192.168.1.123:8080/neworld/user/115"
+//#define deleteAttnedURL @"http://192.168.1.123:8080/neworld/user/117"
+//#define addURL @"http://192.168.1.123:8080/neworld/user/116"
+//#define allFriendURL @"http://192.168.1.123:8080/neworld/user/101"
+//#define isFriendURL @"http://192.168.1.123:8080/neworld/user/104"
+//#define deleFriendURL @"http://192.168.1.123:8080/neworld/user/103"
+//#define beizhuURL @"http://192.168.1.123:8080/neworld/user/105"
+//#define detailURL @"http://192.168.1.123:8080/neworld/user/119"
+//#define AttenURL @"http://192.168.1.123:8080/neworld/user/118"
+//#define typeNameURl @"http://192.168.1.123:8080/neworld/user/120"
+//#define textURL @"http://192.168.1.123:8080/neworld/user/121"
+//#define imageUPLoadURL @"http://192.168.1.123:8080/neworld/user/122"
+//#define nickURL @"http://192.168.1.123:8080/neworld/user/128"
+//#define sendJudgeURL @"http://192.168.1.123:8080/neworld/user/130"
+//#define hotRecommentURL @"http://192.168.1.123:8080/neworld/user/131"
+//#define addFriendURL @"http://192.168.1.123:8080/neworld/user/102"//
+//#define blackListURL @"http://192.168.1.123:8080/neworld/user/106"//
+//#define testTypeURL @"http://192.168.1.123:8080/neworld/user/136"//
+#define subjectURL @"http://192.168.1.123:8080/neworld/user/137"//
+//#define addchildDataURL @"http://192.168.1.123:8080/neworld/user/141"
+//#define childDataURL @"http://192.168.1.123:8080/neworld/user/140"
+#define collectURL @"http://192.168.1.123:8080/neworld/user/112"
+//#define newDeleteURL @"http://192.168.1.123:8080/neworld/user/110"
+//#define seeChildMesURL @"http://192.168.1.123:8080/neworld/user/142"
+//#define shareTaskIdURL @"http://192.168.1.123:8080/neworld/user/144"
+//#define testMessageURL @"http://192.168.1.123:8080/neworld/user/124"
+//#define loginURL @"http://192.168.1.123:8080/neworld/user/125"
+//#define mineURL @"http://192.168.1.123:8080/neworld/user/126"
+//#define upLoadImageURL @"http://192.168.1.123:8080/neworld/user/127"
+//#define hotArtcleURL @"http://192.168.1.123:8080/neworld/user/133"
+//#define parentBlackCircleURL @"http://192.168.1.123:8080/neworld/user/150"
+//#define lgonOutURL @"http://192.168.1.123:8080/neworld/user/152"
+//#define isLikeOrCollectURL @"http://192.168.1.123:8080/neworld/user/154"
+//#define testOrderURL @"http://192.168.1.123:8080/neworld/user/138"
+//#define deletePersonURL @"http://192.168.1.123:8080/neworld/user/145"
+//#define circleCollectURL @"http://192.168.1.123:8080/neworld/user/113"
+//#define commentURL @"http://192.168.1.123:8080/neworld/user/129"
+//#define detailCommetURL @"http://192.168.1.123:8080/neworld/user/114"
+#define newDetailURL @"http://192.168.1.123:8080/neworld/user/108"
+//#define hotCommentURL @"http://192.168.1.123:8080/neworld/user/134"
+//#define newDetailLikeURL @"http://192.168.1.123:8080/neworld/user/111"
+//#define testLikeURL @"http://192.168.1.123:8080/neworld/user/159"
+//#define hotTypeURL @"http://192.168.1.123:8080/neworld/user/132"
+//#define hotShareURL @"http://192.168.1.123:8080/neworld/user/149"
+//#define orderWillPayURL @"http://192.168.1.123:8080/neworld/user/147"
+//#define loadCardURL @"http://192.168.1.123:8080/neworld/user/146"
+//#define deleteOrderURL @"http://192.168.1.123:8080/neworld/user/148"
+//#define payURL @"http://192.168.1.123:8080/neworld/user/139"
+//#define detialToPayURL @"http://192.168.1.123:8080/neworld/user/163"
+//#define isPingBiURL @"http://192.168.1.123:8080/neworld/user/155"
+//#define chagePhoneURL @"http://192.168.1.123:8080/neworld/user/151"
+//#define logOutURL @"http://192.168.1.123:8080/neworld/user/152"
+//#define testCommentURL  @"http://192.168.1.123:8080/neworld/user/157"
+//#define testDetailURL @"http://192.168.1.123:8080/neworld/user/158"
+//#define myChildGradeURL @"http://192.168.1.123:8080/neworld/user/165"
+//#define myChildSchoolURL @"http://192.168.1.123:8080/neworld/user/166"
+//#define myChildclassURL @"http://192.168.1.123:8080/neworld/user/167"
+//#define saveAllMessageURL @"http://192.168.1.123:8080/neworld/user/170"
+//#define addClassURL @"http://192.168.1.123:8080/neworld/user/168"
+//#define currentVersionURL @"http://192.168.1.123:8080/neworld/user/171"
+//#define BlackListURL @"http://192.168.1.123:8080/neworld/user/164"
+//#define bugListURL @"http://192.168.1.123:8080/neworld/user/172"
+#define bugAllListURL @"http://192.168.1.123:8080/neworld/user/172_1"
+#define bugtextURL @"http://192.168.1.123:8080/neworld/user/173"
+//#define bugImgURL @"http://192.168.1.123:8080/neworld/user/174"
+//#define bugDeleteURL @"http://192.168.1.123:8080/neworld/user/175"
+//#define childImageURL @"http://192.168.1.123:8080/neworld/user/141_1"
+//#define childSchoolDeleteURL @"http://192.168.1.123:8080/neworld/user/176"
+//#define eduAddAdressURL @"http://192.168.1.123:8080/neworld/user/181"
+#define checkEduAdressURL @"http://192.168.1.123:8080/neworld/user/180"
+#define modifyEduAdressURL @"http://192.168.1.123:8080/neworld/user/182"
+//#define deleteEduAdressURL @"http://192.168.1.123:8080/neworld/user/183"
+//#define paySaveAdressURL @"http://192.168.1.123:8080/neworld/user/184"
+//#define payStudentMessageURL @"http://192.168.1.123:8080/neworld/user/185"
+//#define eduAllBookURL @"http://192.168.1.123:8080/neworld/user/178"
+//#define eduBookDetailURL @"http://192.168.1.123:8080/neworld/user/179"
+#define newPingBiAllURL @"http://192.168.1.123:8080/neworld/user/186"
+//#define eduBookOrderURL @"http://192.168.1.123:8080/neworld/user/187"
+//#define eduBookPayURL @"http://192.168.1.123:8080/neworld/user/188"
+//#define eduWillPayURL @"http://192.168.1.123:8080/neworld/user/189"
+//#define newHideOrShowURL @"http://192.168.1.123:8080/neworld/user/186_2"
+//#define eduOrderURL @"http://192.168.1.123:8080/neworld/user/190"
+#define replyCommentURL @"http://192.168.1.123:8080/neworld/user/192"
+//#define commentImgURL @"http://192.168.1.123:8080/neworld/user/114_2"
+#define commentLikeURL @"http://192.168.1.123:8080/neworld/user/193"
+#define detailCommentDeteleURL @"http://192.168.1.123:8080/neworld/user/109"
+#define messageSignURL @"http://192.168.1.123:8080/neworld/user/194"
+#define messageURL @"http://192.168.1.123:8080/neworld/user/195"
+#define newStickURL @"http://192.168.1.123:8080/neworld/user/196"
+#define eBookURL @"http://192.168.1.123:8080/neworld/user/197"
+#define eBookPictURL @"http://192.168.1.123:8080/neworld/user/198"
+//#define interlocutionURL @"http://192.168.1.123:8080/neworld/user/199"
+//#define interDiscussURL @"http://192.168.1.123:8080/neworld/user/200"
+//#define interUploadPictureURL @"http://192.168.1.123:8080/neworld/user/204"
+//#define interSendMessageURL @"http://192.168.1.123:8080/neworld/user/205"
+//#define interDiscussDetailURL @"http://192.168.1.123:8080/neworld/user/201"
+//#define interDetailCommentURL @"http://192.168.1.123:8080/neworld/user/202"
+//#define interSendCommentURL @"http://192.168.1.123:8080/neworld/user/206"
+//#define interDetailDeleteURL @"http://192.168.1.123:8080/neworld/user/207"
+//#define interDetailNextURL @"http://192.168.1.123:8080/neworld/user/208"
+
+
+
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreText/CoreText.h>
+#define RGB(R, G, B)    [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0]
+#define TopSpacing 40.0f
+#define BottomSpacing 40.0f
+#define LeftSpacing 20.0f
+#define RightSpacing  20.0f
+#define DELAYEXECUTE(delayTime,func) (dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{func;}))
+#define DistanceFromTopGuiden(view) (view.frame.origin.y + view.frame.size.height)
+#define DistanceFromLeftGuiden(view) (view.frame.origin.x + view.frame.size.width)
+#define ViewOrigin(view)   (view.frame.origin)
+#define ViewSize(view)  (view.frame.size)
+#define ScreenSize [UIScreen mainScreen].bounds.size
+#import "LSYReadUtilites.h"
+#import "LSYReadModel.h"
+#import "LSYReadParser.h"
+
+#define LSYNoteNotification @"LSYNoteNotification"
+#define LSYThemeNotification @"LSYThemeNotification"
+#define LSYEditingNotification @"LSYEditingNotification"
+#define LSYEndEditNotification @"LSYEndEditNotification"
+
+#define MinFontSize 11.0f
+#define MaxFontSize 20.0f
+
+
+/** @brief 注册SDK时，是否允许控制台输出log */
+#define kSDKConfigEnableConsoleLogger @"SDKConfigEnableConsoleLogger"
+
+//随机色
+#define DSRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+//颜色
+#define DSColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+//公用颜色
+#define DSCommonColor [UIColor colorWithRed:254/255.0  green:129/255.0 blue:0 alpha:1.0]
+//导航栏标题字体大小
+#define DSNavigationFont [UIFont boldSystemFontOfSize:16]
+//导航栏标题按钮高度和边距
+#define DSNavigationItemOfTitleViewHeight 34
+#define DSNavigationItemMargin 10
+//首页导航popmenu距离顶部高度
+#define DSPopMenuMarginTop 10
+
+#define KEYWINDOW [UIApplication sharedApplication].keyWindow
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+//是否为4inch
+#define DSFourInch ([UIScreen mainScreen].bounds.size.height >= 568.0)
+//是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+//是否为iOS8及以上系统
+#define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+//是否为iOS11及以上系统
+#define iOS11 ([[UIDevice currentDevice].systemVersion doubleValue] >= 11.0)
+//屏幕宽度
+#define DSScreenWidth [UIScreen mainScreen].bounds.size.width
+//导航栏高度
+#define DSNavigationHeight CGRectGetMaxY([self.navigationController navigationBar].frame)
+//设置一个全局tableview的背景颜色
+#define DSGlobleTableViewBackgroundColor DSColor(239,239,239)
+
+
+//日至输出
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
+
+//LeanCloud appkey
+//#define ApplicationID @"7wqhwi47uvefw0l3st539py7vmkmfqk4rrocix1dxpqsf325"
+//#define ClientKey @"cgg1atp9tvo2ahxzvcnvf1j3e0h808f2tcguoerlorr89whz"
+
+
+//// testCloud appkey
+#define ApplicationID @"0y463z4tk9wk4zbtkq4qn21kshdm9zetj8mkouiqkaoovn4e"
+#define ClientKey @"j9de7xoza1gbvkbp0b6qudz10s9lkwsxqll2nvwrjfty3a58"
+
+
+//首页Cell相关信息
+#define DSStatusToolbarWidth 35
+#define DSStatusCellMargin 5
+#define DSStatusCellInset 8
+#define DSStatusOriginalNameFont [UIFont systemFontOfSize:17]
+#define DSStatusOriginalTimeFont [UIFont systemFontOfSize:10]
+#define DSStatusOriginalSourceFont DSStatusOriginalTimeFont
+#define DSStatusRetweetedNameFont [UIFont systemFontOfSize:18]
+#define DSStatusOriginalDidMoreNotication @"StatusOriginalDidMoreNotication"
+#define WEAKSELF  typeof(self) __weak weakSelf=self;
+
+
+// 富文本字体
+#define DSStatusRichTextFont [UIFont systemFontOfSize:18]
+// 转发微博正文字体
+#define DSStatusHighTextColor SWColor(93, 123, 169)
+// 表情的最大行数
+#define DSEmotionMaxRows 3
+// 表情的最大列数
+#define DSEmotionMaxCols 7
+// 每页最多显示多少个表情
+#define DSEmotionMaxCountPerPage (DSEmotionMaxRows * DSEmotionMaxCols - 1)
+// 表情选择通知
+#define DSEmotionDidSelectedNotification @"EmotionDidSelectedNotification"
+// 表情选择是emotion key
+#define DSSelectedEmotion @"SelectEmotionKey"
+#define DSEmotionDidDeletedNotification @"EmotionDidDeletedNotification"
+// 富文本链接属性标志
+#define DSLinkAttr @"DSLinkAttr"
+// 富文本链接通知
+#define DSLinkDidSelectedNotification @"DSLinkDidSelectedNotification"
+// 转发微博的字体颜色
+#define DSStatusRetweededTextColor DSColor(111, 111, 111)
+// 普通文本通知
+#define DSStatusNormalTextDidSelectedNotification @"DSStatusNormalTextDidSelectedNotification"
+
+
+#define DDLog(FORMAT, ...)   fprintf(stderr, "\n[%s]  function:%s line:%d content:%s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#define WeakSelf  __weak __typeof(&*self)weakSelf = self;
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+#define RICHTEXT_IMAGE (@"[UIImageView]")
+#define iPhone4s ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+// 监听TableView的contentOffset
+#define kZFPlayerViewContentOffset          @"contentOffset"
+// player的单例
+#define ZFPlayerShared                      [ZFBrightnessView sharedBrightnessView]
+// 屏幕的宽
+#define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
+// 屏幕的高
+#define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
+// 颜色值RGB
+#define RGBA(r,g,b,a)                       [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+// 图片路径
+#define ZFPlayerSrcName(file)               [@"ZFPlayer.bundle" stringByAppendingPathComponent:file]
+
+#define ZFPlayerFrameworkSrcName(file)      [@"Frameworks/ZFPlayer.framework/ZFPlayer.bundle" stringByAppendingPathComponent:file]
+
+#define ZFPlayerImage(file)                 [UIImage imageNamed:ZFPlayerSrcName(file)] ? :[UIImage imageNamed:ZFPlayerFrameworkSrcName(file)]
+
+#define ZFPlayerOrientationIsLandscape      UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)
+
+#define ZFPlayerOrientationIsPortrait       UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)
+
+
+#import "ZFPlayerView.h"
+#import "ZFPlayerModel.h"
+#import "ZFPlayerControlView.h"
+#import "ZFBrightnessView.h"
+#import "UITabBarController+ZFPlayerRotation.h"
+#import "UIViewController+ZFPlayerRotation.h"
+#import "UINavigationController+ZFPlayerRotation.h"
+#import "UIImageView+ZFCache.h"
+#import "UIWindow+CurrentViewController.h"
+#import "ZFPlayerControlViewDelegate.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#define APP_FRAME [[UIScreen mainScreen] applicationFrame]
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+//版本比较
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+
+//#define ALog(fmt, ...) NSLog((@"%s #%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+//#define DTrace DLog(@"trace");
+
+#define CELL_DEFAULT_HEIGHT 88
+#define COLOR_HEX(value) [UIColor colorWithHex:value alpha:1]
+
+#define MainColorValue 0x747474
+#define MainColor [UIColor whiteColor]
+#define BlackColor [UIColor blackColor]
+#define GrayColor [UIColor colorWithHex:0xE9E9E8 alpha:1]
+#define TextColor [UIColor colorWithHex:0x747474 alpha:1]
+#define MarkBackColor [UIColor colorWithHex:0x000000 alpha:.4]
+#define BarBlackColor [UIColor colorWithHex:0x151515 alpha:1]
+#define BarBColor [UIColor colorWithHex:0x151515 alpha:.4]
+#define CommonBlackColor [UIColor colorWithHex:0x1C1C1C alpha:1]
+#define COLOR_E6E6E6 [UIColor colorWithHex:0xFFFFFF alpha:.1]
+#define COLOR_F7F7F7 [UIColor colorWithHex:0xF7F7F7 alpha:1]
+#define COLOR_F9AF3A [UIColor colorWithHex:0xF9AF3A alpha:1]
+#define COLOR_4E4E4E [UIColor colorWithHex:0x4E4E4E alpha:1]
+#define COLOR_BFBFBF [UIColor colorWithHex:0xBFBFBF alpha:1]
+#define COLOR_D6D6D6 [UIColor colorWithHex:0xD6D6D6 alpha:1]
+#define COLOR_8A8A8A [UIColor colorWithHex:0x8A8A8A alpha:1]
+#define COLOR_FF2232 [UIColor colorWithHex:0xFF2232 alpha:1]
+#define COLOR_408000 [UIColor colorWithHex:0x408000 alpha:1]
+#define COLOR_4C4C4C [UIColor colorWithHex:0x4C4C4C alpha:1]
+#define COLOR_AAAAAA [UIColor colorWithHex:0xAAAAAA alpha:1]
+#define COLOR_555555 [UIColor colorWithHex:0x555555 alpha:1]
+#define COLOR_C2C2C2 [UIColor colorWithHex:0xC2C2C2 alpha:1]
+#define COLOR_4869E2 [UIColor colorWithHex:0x4869E2 alpha:1]
+#define COLOR_2FDBD7 [UIColor colorWithHex:0x2FDBD7 alpha:1]
+#define COLOR_9ECFF7 [UIColor colorWithHex:0x9ECFF7 alpha:1]
+#define COLOR_7a8fc1 [UIColor colorWithHex:0x7a8fc1 alpha:1]
+#define COLOR_02c7cd [UIColor colorWithHex:0x02c7cd alpha:1]
+#define COLOR_53ddf5 [UIColor colorWithHex:0x53ddf5 alpha:1]
+#define COLOR_9badd1 [UIColor colorWithHex:0x9badd1 alpha:1]
+
+//背景
+#define COLOR_151515 [UIColor colorWithHex:0x151515 alpha:1]
+#define COLOR_1C1C1C [UIColor colorWithHex:0x1C1C1C alpha:1]
+//消息
+#define COLOR_A3A3A3 [UIColor colorWithHex:0xA3A3A3 alpha:1]
+#define COLOR_4e607d [UIColor colorWithHex:0x4e607d alpha:1]
+#define COLOR_2F2F2F [UIColor colorWithHex:0x2F2F2F alpha:1]
+
+
+#define SuppressPerformSelectorLeakWarning(Stuff) \
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+Stuff; \
+_Pragma("clang diagnostic pop") \
+} while (0)
+
+
+#define MESSAGE_LOADING @"加载中..."
+#define MESSAGE_LOGIN   @"正在登录中…"
+#define ORDER_WAIT_PAY  @"未付款"
+#define ORDER_DONE_PAID @"已付款"
+
+#define InRideMessage          @"InRideMessage"
+#define EndInRideMessage       @"EndInRideMessage"
+#define OtherNotAllowedRecived @"OtherNotAllowedRecived"
+#define UnreadCirCleMessage    @"UnreadCirCleMessage"
+#define RefreshMyDiamond       @"RefreshMyDiamond"
+
+
+
+/*********************Bike***********************/
+#define  LineWidth 0.6//LineChart横竖线宽度
+//#define Margin kScreenWidth/375*6
+#define Interim kScreenWidth/375*10
+
+#define kFitHeight(value) kScreenHeight/1334*value
+#define kFitWidth(value)  kScreenWidth/750*value
+
+#define FontSize(value)    kScreenHeight/667*value
+#define BoldFontWithSize(size) [UIFont boldSystemFontOfSize:size]
+#define FontWithSize(size) [UIFont systemFontOfSize:size]
+#define kFitSize(size)     [UIFont systemFontOfSize:size*kScreenHeight/667]
+#define kBoldFitSize(size) [UIFont boldSystemFontOfSize:size*kScreenHeight/667]
+#define kFontSize(value)   [UIFont systemFontOfSize:kScreenHeight/667*value]
+
+
+#define TitleFont      kFont32Size
+#define PriceFont      kFont28Size
+#define AmountFont     kFont28Size
+#define TotalFeeFont   kFont28Size
+#define TimeFont       kFont28Size
+#define PayStatusFont  kFont30Size
+#define DesciptionFont kFont30Size
+
+#define kFont50Size [UIFont systemFontOfSize:kScreenHeight/667*25]//28.1
+#define kFont38Size [UIFont systemFontOfSize:kScreenHeight/667*19]
+#define kFont36Size [UIFont systemFontOfSize:kScreenHeight/667*18]
+#define kFont34Size [UIFont systemFontOfSize:kScreenHeight/667*17]
+#define kFont32Size [UIFont systemFontOfSize:kScreenHeight/667*16]
+#define kFont31Size [UIFont systemFontOfSize:kScreenHeight/667*15.5]//17.5
+#define kFont30Size [UIFont systemFontOfSize:kScreenHeight/667*15]//17
+#define kFont28Size [UIFont systemFontOfSize:kScreenHeight/667*14]//15.7
+#define kFont26Size [UIFont systemFontOfSize:kScreenHeight/667*13]//14.9
+#define kFont24Size [UIFont systemFontOfSize:kScreenHeight/667*12]//13.6
+#define kFont22Size [UIFont systemFontOfSize:kScreenHeight/667*11]//12.2
+#define kFont20Size [UIFont systemFontOfSize:kScreenHeight/667*10]//11
+
+
+

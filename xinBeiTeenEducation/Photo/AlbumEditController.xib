@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumEditController">
+            <connections>
+                <outlet property="naviBar" destination="3T1-dP-8xZ" id="MK4-Ld-men"/>
+                <outlet property="titleItem" destination="Amv-v1-oNg" id="vkt-fM-otI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" misplaced="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="3T1-dP-8xZ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="f1v-Wk-kQ9"/>
+                    </constraints>
+                    <items>
+                        <navigationItem id="Amv-v1-oNg">
+                            <barButtonItem key="leftBarButtonItem" image="clear.png" id="yIg-28-Byt">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="f0b-2a-oMS">
+                                    <rect key="frame" x="16" y="11" width="2" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <inset key="contentEdgeInsets" minX="-6" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" image="back.png"/>
+                                    <connections>
+                                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="ZRk-2q-yTN"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" systemItem="trash" id="qaj-VC-7ek">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="deletePhotoAction:" destination="-1" id="qHB-xL-h5k"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3T1-dP-8xZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DGc-oG-fkx"/>
+                <constraint firstAttribute="trailing" secondItem="3T1-dP-8xZ" secondAttribute="trailing" id="t4M-ff-NBF"/>
+                <constraint firstItem="3T1-dP-8xZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xa4-dC-TRz"/>
+            </constraints>
+            <point key="canvasLocation" x="364" y="199"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back.png" width="8" height="13"/>
+        <image name="clear.png" width="3" height="3"/>
+    </resources>
+</document>
